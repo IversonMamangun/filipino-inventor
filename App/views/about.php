@@ -2,7 +2,7 @@
 <!-- Big centered About Us -->
 <h1 class="text-5xl font-bold text-center my-10 text-[#033E94]">ABOUT US</h1>
 
-<div class="grid grid-cols-2 gap-8 h-screen px-10">
+<div class="grid grid-cols-2 gap-8 h-screen-2xl px-10">
   <!-- Column 1: two rows -->
   <div class="grid grid-rows-2 gap-8">
     <!-- First block -->
