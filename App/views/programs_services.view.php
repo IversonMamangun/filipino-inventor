@@ -13,12 +13,12 @@
 </div>
 
 <!-- Carousel + Text Wrapper with sharp 50/50 split background -->
-<div class="relative mt-5 px-10 right-13"
+<div class="relative mt-5 px-10"
      style="background: linear-gradient(to bottom, white 0 35%, #033E94 35% 100%);">
 
     <!-- Carousel Track -->
     <div id="carousel"
-        class="flex overflow-hidden scroll-smooth gap-10 py-10 px-25">
+        class="flex overflow-hidden scroll-smooth gap-10 py-10 px-25 mr-4">
 
         <!-- Card 1 -->
         <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-1/3">

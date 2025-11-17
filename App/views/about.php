@@ -78,7 +78,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-xl text-white leading-relaxed">
+        <p class="text-2xl text-white leading-relaxed">
           To empower Filipino inventors and innovators through cooperative enterprise, technology incubation, and market linkages.
         </p>
       </div>
@@ -88,7 +88,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-xl text-white leading-relaxed">
+        <p class="text-2xl text-white leading-relaxed">
           To bridge invention and industry by supporting product development, intellectual property protection, and commercialization.
         </p>
       </div>
@@ -98,7 +98,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-xl text-white leading-relaxed">
+        <p class="text-2xl text-white leading-relaxed">
           To create inclusive prosperity by mobilizing national talent and resources toward sustainable and socially responsible innovation.
         </p>
       </div>
@@ -109,13 +109,13 @@
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
 
-        <p class="text-xl text-white leading-relaxed">
+        <p class="text-2xl text-white leading-relaxed">
           To promote a culture of invention and creativity among Filipinos, especially the youth, in line with national development goals.
         </p>
       </div>
     </div>
-    <div class="flex justify-center mt-8">
-      <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-2xl font-semibold px-12 py-4 focus:outline-none">
+    <div class="flex justify-center mb-8">
+      <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-xl font-semibold px-8 py-3 focus:outline-none">
         More About Us?
       </button>
     </div>

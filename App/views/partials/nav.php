@@ -25,7 +25,7 @@
           <a href="#" class="block py-1.5 px-2 text-s text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Program & Services</a>
         </li>
         <li>
-          <a href="#" class="block py-1.5 px-2 text-s text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Strategic Plans 2026-2027</a>
+          <a href="#" class="block py-1.5 px-2 text-s text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Strategic Plans 2027-2028</a>
         </li>
         <li>
           <a href="#" class="block py-1.5 px-2 text-s text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0">Testimonials</a>

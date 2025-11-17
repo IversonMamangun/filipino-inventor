@@ -135,18 +135,18 @@
 
   <!-- Prev button -->
   <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 rounded-full">
-    <img src="./public/assets/rightarrow.png" alt="Previous" class="w-10 h-10 transform rotate-180" />
+    <img src="./public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
   </button>
 
   <!-- Next button -->
   <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 rounded-full">
-    <img src="./public/assets/rightarrow.png" alt="Next" class="w-10 h-10" />
+    <img src="./public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
   </button>
 </div>
 <div class="flex justify-center mt-6">
   <button type="submit"
     class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 
-           shadow-md rounded-xl text-2xl px-18 py-4">
+           shadow-md rounded-xl text-2xl px-8 py-3">
     View all
   </button>
 </div>
@@ -179,7 +179,7 @@
   <div class="col-span-2 flex justify-center mt-6">
     <button type="submit"
       class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 
-             shadow-md font-semibold rounded-xl text-xl px-18 py-4">
+             shadow-md font-semibold rounded-xl text-xl px-8 py-3">
       View all
     </button>
   </div>
