@@ -7,7 +7,6 @@
   Looking ahead to 2027-2028, FISMPC has set an ambitious strategic agenda to make Filipino inventions drivers of national productivity, global competitiveness, and cooperative prosperity. Our strategy is built on four pillars:
   <strong>Innovation Commercialization & Technology Transfer; Sustainable Cooperative Enterprise & Green Manufacturing; Digital Transformation & Inclusive Market Access; and Capacity Building & Policy Advocacy for Inventors.</strong>
 </p>
-
 <div class="min-h-screen px-[14%] bg-cover bg-center relative shadow-lg"
   style="background-image: url('public/assets/news.jpg');">
 
@@ -16,10 +15,10 @@
 
     <!-- Title -->
 <!-- Original -->
- <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[37%] py-6 rounded-br-[40px] text-2xl font-bold">
+ <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[23.5rem] py-6 rounded-br-[40px] text-2xl font-bold">
 </div>
 
- <div class="-ml-4 absolute top-4 left-0 bg-[#829FCA] text-white px-[35%] py-6 rounded-br-[40px] text-2xl font-bold">
+ <div class="-ml-4 absolute top-4 left-0 bg-[#829FCA] text-white px-[22.3rem] py-6 rounded-br-[40px] text-2xl font-bold">
 </div>
 
 <div class="-ml-4 absolute top-4 left-0 bg-[#033E94] text-white px-6 py-2 rounded-br-[40px] text-2xl font-bold">
@@ -88,7 +87,7 @@
   <!-- Full-width row for button -->
   <div class="flex justify-center pb-5 mt-6">
     <button type="submit"
-      class="text-[#033E94] bg-[#F3F6FA] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 
+      class="text-[#033E94] bg-[#F3F6FA] hover:bg-blue-900 focus:ring-4 focus:ring-gray-300 
              shadow-md  rounded-xl text-xl px-8 py-2">
       View all
     </button>
@@ -107,6 +106,7 @@
     </button>
   </div>
 </div>
+
 
 
 <div class="bg-white shadow-md px-[24%] p-6">

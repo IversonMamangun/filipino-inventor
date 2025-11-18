@@ -8,6 +8,7 @@ include_once("App/views/about.php");
 include_once("App/views/programs_services.view.php");
 include_once("App/views/strategic-plans.view.php");
 include_once("App/views/testimonials.view.php");
+include_once("App/views/news_updates.view.php");
 
 include_once("App/views/gallery.view.php");
 

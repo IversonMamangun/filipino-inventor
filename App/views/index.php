@@ -1,7 +1,7 @@
 <div class="relative">
   <img src="public/assets/bg1.jpg" alt="" class="w-full h-auto rounded-b-[18%]">
   
-<div class="absolute inset-0 flex flex-col items-center justify-end px-4 text-center pb-12">
+<div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
   <h1 class="text-white text-3xl md:text-5xl font-bold drop-shadow-lg mb-8">
     FILIPINO INVESTORS SOCIETY MULTI-PURPOSE COOPERATIVE 
     <span class="text-[#FFCC00]">(FISMPC)</span>
