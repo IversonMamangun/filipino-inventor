@@ -13,15 +13,15 @@
 </div>
 
 <!-- Carousel + Text Wrapper with sharp 50/50 split background -->
-<div class="relative mt-5 px-10"
-     style="background: linear-gradient(to bottom, white 0 35%, #033E94 35% 100%);">
+<div class="relative mt-5 px-18"
+    style="background: linear-gradient(to bottom, white 0 35%, #033E94 35% 100%);">
 
     <!-- Carousel Track -->
     <div id="carousel"
-        class="flex overflow-hidden scroll-smooth gap-10 py-10 px-25 mr-4">
+        class="flex overflow-hidden scroll-smooth gap-10 py-10 px-16">
 
         <!-- Card 1 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-1/3">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
             <a href="#">
                 <img class="rounded-t-3xl w-full" src="public/assets/p1.jpg" alt="Invention Development & Commercialization" />
             </a>
@@ -36,8 +36,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-1/3">
-            <a href="#">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3"> <a href="#">
                 <img class="rounded-t-3xl w-full" src="public/assets/p2.jpg" alt="Cooperative Enterprise Development" />
             </a>
             <a href="#">
@@ -51,8 +50,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-1/3">
-            <a href="#">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3"> <a href="#">
                 <img class="rounded-t-3xl w-full" src="public/assets/p3.jpg" alt="Research and Innovation Hubs" />
             </a>
             <a href="#">
@@ -66,8 +64,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-1/3">
-            <a href="#">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3"> <a href="#">
                 <img class="rounded-t-3xl w-full" src="public/assets/p4.jpg" alt="National Innovation Advocacy" />
             </a>
             <a href="#">
@@ -81,8 +78,7 @@
         </div>
 
         <!-- Card 5 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-1/3">
-            <a href="#">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3"> <a href="#">
                 <img class="rounded-t-3xl w-full" src="public/assets/p5.jpg" alt="Trade Fairs and Exhibitions" />
             </a>
             <a href="#">
@@ -99,12 +95,12 @@
 
     <!-- Navigation Buttons -->
     <button onclick="scrollCarousel(-1)"
-        class="absolute left-14 top-1/2 -translate-y-7/3 bg-white rounded-full shadow-lg">
+        class="absolute left-1 top-1/2 -translate-y-7/3 bg-white rounded-full shadow-lg">
         <img src="./public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
     </button>
 
     <button onclick="scrollCarousel(1)"
-        class="absolute right-0 top-1/2 -translate-y-7/3 bg-white rounded-full shadow-lg">
+        class="absolute right-1 top-1/2 -translate-y-7/3 bg-white rounded-full shadow-lg">
         <img src="./public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
     </button>
 
@@ -121,15 +117,60 @@
     </div>
 </div>
 
+<style>
+    /* Active card style */
+    .active {
+        transform: scale(1.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+
 <script>
     const carousel = document.getElementById('carousel');
-    const cardWidth = carousel.querySelector('.bg-white').offsetWidth + 24; // card width + gap
-    const visibleCards = 3;
+    const cards = carousel.querySelectorAll('.bg-white');
+    const cardWidth = cards[0].offsetWidth + 24; // card width + gap
+
+    // Duplicate all cards once (so we have a long track)
+    carousel.innerHTML += carousel.innerHTML;
+
+    // Get all cards again (originals + clones)
+    const allCards = carousel.querySelectorAll('.bg-white');
+
+    // initialize
+    setActiveCard(0);
 
     function scrollCarousel(direction) {
         carousel.scrollBy({
-            left: direction * cardWidth * visibleCards,
+            left: direction * cardWidth,
             behavior: 'smooth'
         });
+
+        setTimeout(() => {
+            // If we reach the end of the duplicated track, reset seamlessly
+            if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+                carousel.scrollLeft = 0;
+            } else if (carousel.scrollLeft <= 0) {
+                carousel.scrollLeft = carousel.scrollWidth / 2;
+            }
+
+            // Update active card index relative to original set
+            const firstVisibleIndex = Math.round(carousel.scrollLeft / cardWidth) % cards.length;
+            setActiveCard(firstVisibleIndex);
+        }, 400);
     }
+
+    function setActiveCard(index) {
+        // Clear all
+        allCards.forEach(c => c.classList.remove('active'));
+        // Highlight the "real" card in both sets
+        allCards.forEach((c, i) => {
+            if (i % cards.length === index) {
+                c.classList.add('active');
+            }
+        });
+    }
+
+    // Auto-play continuous scroll
+    setInterval(() => scrollCarousel(1), 3000);
 </script>

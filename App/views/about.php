@@ -1,5 +1,6 @@
-<!-- Big centered About Us -->
-<h1 class="text-5xl font-bold text-center my-10 text-[#033E94]">ABOUT US</h1>
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center my-10 text-[#033E94]">
+  ABOUT US
+</h1>
 
 <div class="grid grid-cols-2 gap-8 h-screen-2xl px-15 mb-8">
   <!-- Column 1: two rows -->

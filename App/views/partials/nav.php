@@ -1,4 +1,4 @@
-<nav class="bg-white bg-opacity-90 fixed top-15 left-1/2 transform -translate-x-1/2 w-[95%] z-50 rounded-xl shadow-lg border border-gray-200">
+<nav id="navbar" class="bg-white bg-opacity-90 fixed transition-all duration-300 ease-in-out top-15 left-1/2 transform -translate-x-1/2 w-[95%] z-50 rounded-xl shadow-lg border border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-4">
     <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="public/assets/navlogo.png" class="h-9" alt="Logo of Filipino Investor">
@@ -43,3 +43,16 @@
     </div>
   </div>
 </nav>
+<script>
+
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.remove("top-15");
+      navbar.classList.add("top-4");
+    } else {
+      navbar.classList.remove("top-4");
+      navbar.classList.add("top-15");
+    }
+  });
+</script>

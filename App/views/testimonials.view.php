@@ -95,12 +95,12 @@
   <!-- Navigation Buttons -->
   <button onclick="scrollCarousel(-1)"
     class="-mx-10 absolute left-5 top-1/2 -translate-y-1/2 rounded-full p-2">
-    <img src="public/assets/leftarrow.png" alt="Previous" class="w-20 h-20" />
+    <img src="public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
   </button>
 
   <button onclick="scrollCarousel(1)"
     class="-mx-8 absolute right-5 top-1/2 -translate-y-1/2 rounded-full p-2">
-    <img src="public/assets/rightarrow.png" alt="Next" class="w-20 h-20" />
+    <img src="public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
   </button>
 </div>
 
