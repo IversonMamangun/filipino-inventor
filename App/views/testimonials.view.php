@@ -11,21 +11,17 @@
 
 <div class="relative -mt-32 px-20 ml-5">
   <!-- Carousel Track -->
-  <!-- <div id="carousel" class="flex overflow-hidden scroll-smooth gap-10 mb-8"> -->
   <div id="carousel" class="flex overflow-hidden scroll-smooth gap-10 mb-8 max-w-full md:max-w-[1400px]">
-
 
     <!-- Card 1 -->
     <div class="flex bg-white p-4 rounded-xl shadow-lg w-[450px] h-[290px]">
-      <!-- Left Column -->
       <div class="flex flex-col justify-between items-center w-[30%] mr-2">
         <img class="object-cover w-24 h-24 rounded-full"
           src="public/assets/marisol.png" alt="Marisol D.">
         <i>
-          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180 ">"</div>
+          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180">"</div>
         </i>
       </div>
-      <!-- Right Column -->
       <div class="flex flex-col w-[65%] leading-normal">
         <h5 class="text-xl font-bold text-[#033E94]">Marisol D.</h5>
         <i class="text-[#033E94]">Teacher and FISMPC Member</i>
@@ -43,7 +39,7 @@
         <img class="object-cover w-24 h-24 rounded-full"
           src="public/assets/juan.png" alt="Juan Carlo R.">
         <i>
-          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180 ">"</div>
+          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180">"</div>
         </i>
       </div>
       <div class="flex flex-col w-[65%] leading-normal">
@@ -61,25 +57,25 @@
         <img class="object-cover w-24 h-24 rounded-full"
           src="public/assets/lani.png" alt="Lani P.">
         <i>
-          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180 ">"</div>
+          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180">"</div>
         </i>
       </div>
       <div class="flex flex-col w-[65%] leading-normal">
         <h5 class="text-xl font-bold text-[#033E94]">Lani P.</h5>
         <i class="text-[#033E94]">Tech Startup Co-founder</i>
         <p class="mt-3 text-gray-700">
-          FISMPC is like a family of inventors. We share ideas, resources, and celebrate each other’s successes. At Inventors Demo Day, our team even found an investor who believes in our project
+          FISMPC is like a family of inventors. We share ideas, resources, and celebrate each other’s successes. At Inventors Demo Day, our team even found an investor who believes in our project.
         </p>
       </div>
     </div>
 
-        <!-- Card 4 -->
-    <!-- <div class="flex bg-white p-4 rounded-xl shadow-lg w-[450px] h-[290px]">
+    <!-- Card 4 -->
+    <div class="flex bg-white p-4 rounded-xl shadow-lg w-[450px] h-[290px]">
       <div class="flex flex-col justify-between items-center w-[30%] mr-2">
         <img class="object-cover w-24 h-24 rounded-full"
           src="public/assets/miguel.png" alt="Miguel S.">
         <i>
-          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180 ">"</div>
+          <div class="text-[14rem] font-extrabold text-[#D70328] -mt-[6rem] pr-[3rem] rotate-180">"</div>
         </i>
       </div>
       <div class="flex flex-col w-[65%] leading-normal">
@@ -89,7 +85,7 @@
           Our cooperative has truly empowered me. From workshops on business planning to access to cooperative loans, FISMPC has provided everything I needed to turn my prototype into a social enterprise.
         </p>
       </div>
-    </div> -->
+    </div>
   </div>
 
   <!-- Navigation Buttons -->
@@ -107,14 +103,42 @@
 <!-- Carousel Script -->
 <script>
   const carousel = document.getElementById('carousel');
-  const cardWidth = carousel.querySelector('.bg-white').offsetWidth + 40; // 40px gap from gap-10
-  const visibleCards = 1; // scroll one card per click
+  const cards = carousel.querySelectorAll('.bg-white');
+  const cardWidth = cards[0].offsetWidth + 40; // width + gap
+
+  // Duplicate cards for infinite loop
+  carousel.innerHTML += carousel.innerHTML;
+  const allCards = carousel.querySelectorAll('.bg-white');
+
+  // Initialize active card
+  setActiveCard(0);
 
   function scrollCarousel(direction) {
     carousel.scrollBy({
-      left: direction * cardWidth * visibleCards,
+      left: direction * cardWidth,
       behavior: 'smooth'
     });
+
+    setTimeout(() => {
+      // Seamless reset
+      if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+        carousel.scrollLeft = 0;
+      } else if (carousel.scrollLeft <= 0) {
+        carousel.scrollLeft = carousel.scrollWidth / 2;
+      }
+
+      // Update active card
+      const firstVisibleIndex = Math.round(carousel.scrollLeft / cardWidth) % cards.length;
+      setActiveCard(firstVisibleIndex);
+    }, 400);
   }
 
+  function setActiveCard(index) {
+    allCards.forEach(c => c.classList.remove('active'));
+    allCards.forEach((c, i) => {
+      if (i % cards.length === index) {
+        c.classList.add('active');
+      }
+    });
+  }
 </script>

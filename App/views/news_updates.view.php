@@ -39,7 +39,8 @@
 
     <!-- Column 2: stack of cards -->
     <!-- ✨ Added fixed height + scroll -->
-    <div class="col-span-1 space-y-3 h-[600px] overflow-y-auto pr-2">
+    <div class="col-span-1 space-y-3 h-[600px] overflow-y-auto pr-2
+    md:space-y-8 md:mt-3 md:px-7 md:h-[450px]">
       <!-- Card 1 -->
       <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-xl">
         <img class="object-cover w-44 h-44 rounded-3xl" src="./public/assets/n2.jpg" alt="">
@@ -63,7 +64,7 @@
           <h2 class="text-xl font-bold text-[#D70328]">March 2025</h2>
           <h2 class="mt-2 text-[#033E94] font-semibold">National Inventors Week 2025:</h2>
           <p id="detail_2" class="pr-8 text-gray-700 h-13 overflow-hidden transition-all duration-300">
-            Our annual innovation festival attracted over 5,000 participants. Inventors nationwide showcased their inventions and attended seminars on patent filing and business development. Youth inventor awards were given to 
+            Our annual innovation festival attracted over 5,000 participants. Inventors nationwide showcased their inventions and attended seminars on patent filing and business development. Youth inventor awards were given to
           </p>
           <button onclick="toggleDetails(event, 'detail_2')"
             class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 py-1">
@@ -122,7 +123,10 @@
 
     // ✨ Optional: auto-scroll into view if expanded
     if (!isHidden) {
-      detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      detail.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
     }
   }
 </script>

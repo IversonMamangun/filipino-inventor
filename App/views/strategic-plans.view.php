@@ -7,13 +7,12 @@
   Looking ahead to 2027-2028, FISMPC has set an ambitious strategic agenda to make Filipino inventions drivers of national productivity, global competitiveness, and cooperative prosperity. Our strategy is built on four pillars:
   <strong>Innovation Commercialization & Technology Transfer; Sustainable Cooperative Enterprise & Green Manufacturing; Digital Transformation & Inclusive Market Access; and Capacity Building & Policy Advocacy for Inventors.</strong>
 </p>
-<div class="max-h-screen px-[14%] bg-cover bg-center relative shadow-lg"
+<div class="h-auto px-[14%] bg-cover bg-center relative shadow-lg"
   style="background-image: url('public/assets/news.jpg');">
   <div class="relative w-full h-auto">
     <div id="slides">
       <!-- First column: Whole size image -->
       <div class="slide block relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
-
         <!-- Title -->
         <!-- Original -->
         <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[23.5rem] lg:px-[20rem] sm:px-[20rem] py-6 rounded-br-[40px] text-2xl font-bold">
@@ -573,7 +572,7 @@
         </div>
         <p class="mt-15 px-6">15 regional cooperative partnerships; expanded grassroots innovation support.
         </p>
-      </div> 
+      </div>
 
     </div>
     <!-- Full-width row for button -->
@@ -585,22 +584,22 @@
       </button>
     </div>
 
-   
-  </div>
- <!-- Navigation arrows (outside slides) -->
-    <div class="absolute inset-y-0 left-0 flex items-center px-8">
-      <button class="prev-btn bg-white rounded-full shadow-md hover:bg-gray-200">
-        <img src="./public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
-      </button>
-    </div>
 
-    <div class="absolute inset-y-0 right-0 flex items-center px-8">
-      <button class="next-btn bg-white rounded-full shadow-md hover:bg-gray-200">
-        <img src="./public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
-      </button>
-    </div>
+  </div>
+  <!-- Navigation arrows (outside slides) -->
+  <div class="absolute inset-y-0 left-0 flex items-center px-8">
+    <button class="prev-btn bg-white rounded-full shadow-md hover:bg-gray-200">
+      <img src="./public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
+    </button>
+  </div>
+
+  <div class="absolute inset-y-0 right-0 flex items-center px-8">
+    <button class="next-btn bg-white rounded-full shadow-md hover:bg-gray-200">
+      <img src="./public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
+    </button>
+  </div>
 </div>
-<div class="bg-white shadow-md px-[24%] p-6">
+<div class="bg-white shadow-md px-8 p-6">
   <p class="text-gray-700 text-base leading-relaxed text-center">
     Together, these stratigic programs ensure that FISMPC continues to empower Filipino inventors and drive sustainable, innovation across the country.
   </p>

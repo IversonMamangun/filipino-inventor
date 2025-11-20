@@ -1,8 +1,8 @@
 <div class="relative">
-  <img src="public/assets/gallery.jpg" alt="" class="w-full h-auto">
+  <img src="public/assets/gallery.jpg" alt="" class="w-full h-auto sm:h-[15rem]">
 
-  <div class="absolute inset-0 flex flex-col items-center justify-end px-2 text-center mb-2">
-    <h1 class="text-white text-3xl md:text-5xl font-bold drop-shadow-lg mb-4">
+  <div class="absolute inset-0 flex flex-col items-center justify-center px-2 text-center mb-2">
+    <h1 class="text-white text-3xl md:text-4xl font-bold drop-shadow-lg mb-4">
       Gallery
     </h1>
     <p class="text-white text-lg md:text-lg max-w-5xl drop-shadow-md mb-5">
@@ -81,7 +81,7 @@
 <!-- ✅ Centered Carousel -->
 <div class="relative max-w-7xl mx-auto overflow-hidden">
   <!-- Carousel wrapper -->
-  <div class="flex overflow-x-auto snap-x px-13 snap-mandatory scroll-smooth">
+  <div class="flex overflow-x-auto snap-x mx-15 snap-mandatory scroll-smooth">
 
     <!-- Slide 1 -->
     <div class="block w-full md:w-4/3 p-6 rounded-xl shadow-lg mx-2 bg-white snap-center">
@@ -154,25 +154,33 @@
 
 <h1 class="text-5xl font-bold mx-[8%] my-10 text-[#033E94]">Photo</h1>
 
-<div class="grid grid-cols-2 gap-4 h-screen-auto p-[6%] shadow-lg">
+<div class="grid grid-cols-2 md:grid-cols-1 gap-4 h-screen-auto p-[6%] shadow-lg">
   <!-- First column: Whole size image -->
-  <div class="relative w-full h-full">
+  <div class="relative w-full h-full col-span-1 md:col-span-2">
     <img src="./public/assets/pp1.jpg" alt="Large Image"
       class="w-full h-full object-cover p-4 shadow-xl">
 
-    <div class="absolute top-10 bg-yellow-500 bg-gradient-to-tr 
+    <div class="absolute top-10 md:top-15 bg-yellow-500 bg-gradient-to-tr 
       from-yellow-500 via-yellow-300 to-yellow-600
-      text-white px-15 py-2 rounded-br-4xl text-2xl font-bold">
+      text-white px-6 py-2 rounded-br-full text-2xl md:text-4xl md:px-13 font-bold">
       HIGHLIGHTS
     </div>
   </div>
 
   <!-- Second column: 4 smaller images -->
-  <div class="grid grid-cols-2 grid-rows-2 gap-4">
-    <img src="./public/assets/pp1.jpg" alt="Image 1" class="w-full h-full object-cover p-4 shadow-xl">
-    <img src="./public/assets/pp1.jpg" alt="Image 2" class="w-full h-full object-cover p-4 shadow-xl">
-    <img src="./public/assets/pp1.jpg" alt="Image 3" class="w-full h-full object-cover p-4 shadow-xl">
-    <img src="./public/assets/pp1.jpg" alt="Image 4" class="w-full h-full object-cover p-4 shadow-xl">
+  <div class="grid grid-cols-2 grid-rows-2 gap-4 col-span-1">
+    <div>
+      <img src="./public/assets/pp1.jpg" alt="Image 1" class="w-full h-full object-cover p-4 shadow-xl">
+    </div>
+    <div>
+      <img src="./public/assets/pp1.jpg" alt="Image 2" class="w-full h-full object-cover p-4 shadow-xl">
+    </div>
+    <div>
+      <img src="./public/assets/pp1.jpg" alt="Image 3" class="w-full h-full object-cover p-4 shadow-xl">
+    </div>
+    <div>
+      <img src="./public/assets/pp1.jpg" alt="Image 4" class="w-full h-full object-cover p-4 shadow-xl">
+    </div>
   </div>
 
   <!-- Full-width row for button -->
