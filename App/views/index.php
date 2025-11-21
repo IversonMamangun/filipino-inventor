@@ -6,7 +6,7 @@
 
   <div class="absolute transition-all duration-300 ease-in-out inset-0 flex flex-col items-center justify-center 
             px-2 sm:px-4 text-center 
-            mt-24 sm:mt-32 md:mt-40 lg:mt-48 xl:mt-56 2xl:mt-20">
+            mt-24 sm:mt-32 md:mt-40 lg:mt-48 xl:mt-30 2xl:mt-15">
     <!-- Heading -->
     <h1 class="text-white 
              text-base sm:text-xl md:text-4xl lg:text-5xl xl:text-6xl  
@@ -17,8 +17,8 @@
 
     <!-- Paragraph -->
     <p class="text-white 
-            text-xs sm:text-sm md:text-2xl lg:text-lg xl:text-xl 
-            max-w-md sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 
+            text-xs sm:text-sm md:text-2xl 2xl:text-2xl lg:text-lg xl:text-xl 
+            max-w-md sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-8xl 2xl:max-w-[70%]
             drop-shadow-md px-2 sm:px-4 md:px-6 md:mb-6">
       Welcome to the Filipino Investors Society Multi-Purpose Cooperative (FISMPC)!
       We are a dynamic community of visionary inventors, innovators, scientists, and entrepreneurs

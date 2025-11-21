@@ -2,8 +2,9 @@
   STRATEGIC PLANS
   <span class="text-[#D70328]">2027-2028</span>
 </h1>
-
-<p class="text-black text-base md:text-lg max-w-3xl mx-auto text-center leading-relaxed drop-shadow mb-6 px-6">
+<p class="text-black text-base md:text-lg 
+           max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl
+           mx-auto text-center leading-relaxed drop-shadow mb-6 px-6">
   Looking ahead to 2027-2028, FISMPC has set an ambitious strategic agenda to make Filipino inventions drivers of national productivity, global competitiveness, and cooperative prosperity. Our strategy is built on four pillars:
   <strong>Innovation Commercialization & Technology Transfer; Sustainable Cooperative Enterprise & Green Manufacturing; Digital Transformation & Inclusive Market Access; and Capacity Building & Policy Advocacy for Inventors.</strong>
 </p>

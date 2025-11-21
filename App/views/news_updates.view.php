@@ -7,26 +7,25 @@
     NEWS & UPDATES
   </span>
 </div>
+<div class="flex justify-center p-4 sm:p-8 bg-gray-100">
+  <!-- Responsive grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0 w-full max-w-7xl">
 
-<div class="flex justify-center p-8 px-[10rem] bg-gray-100">
-  <!-- 2 column grid -->
-  <div class="grid grid-cols-2 w-full">
-
-    <!-- Column 1: whole highlight card -->
-    <div class="col-span-1 px-8">
-      <div class="bg-white block rounded-3xl shadow-xs">
-        <a href="#" class="relative">
-          <img class="rounded-t-2xl w-auto h-75" src="./public/assets/n1.jpg" alt="" />
+    <!-- Column 1: highlight card -->
+    <div class="px-4 md:px-8">
+      <div class="bg-white rounded-3xl shadow-xs">
+        <a href="#" class="relative block">
+          <img class="rounded-t-2xl w-full h-60 md:h-75 object-cover" src="./public/assets/n1.jpg" alt="" />
           <div class="absolute -ml-5 top-5 left-0 bg-gradient-to-tr 
               from-yellow-600 via-yellow-400 to-yellow-600
-              text-white pl-10 pr-20 py-1 rounded-br-3xl text-3xl font-semibold text-left">
+              text-white pl-10 pr-20 py-1 rounded-br-3xl text-2xl md:text-3xl font-semibold text-left">
             HIGHLIGHTS
           </div>
         </a>
         <div class="p-6 text-start">
-          <h2 class="text-xl font-bold text-[#D70328]">Ongoing</h2>
+          <h2 class="text-lg md:text-xl font-bold text-[#D70328]">Ongoing</h2>
           <h2 class="mt-2 text-[#033E94] font-semibold">New Partnerships</h2>
-          <p>FISMPC continues to collaborate with government and academic partners. We work closely with DOST, DTI, IPOPHL, and local governments to expand opportunities for inventors. Stay tuned to this section for monthly newsletters, grant announcements, and upcoming event schedules.</p>
+          <p class="text-sm md:text-base">FISMPC continues to collaborate with government and academic partners. We work closely with DOST, DTI, IPOPHL, and local governments to expand opportunities for inventors. Stay tuned to this section for monthly newsletters, grant announcements, and upcoming event schedules.</p>
           <div class="flex justify-center pb-5 mt-6">
             <button onclick="toggleDetails(event, 'detail')"
               class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 py-1">
@@ -39,8 +38,8 @@
 
     <!-- Column 2: stack of cards -->
     <!-- ✨ Added fixed height + scroll -->
-    <div class="col-span-1 space-y-3 h-[600px] overflow-y-auto pr-2
-    md:space-y-8 md:mt-3 md:px-7">
+    <div class="flex flex-wrap gap-4 h-[600px] overflow-y-auto pr-2 md:mt-3 md:px-7
+    ">
       <!-- Card 1 -->
       <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-xl">
         <img class="object-cover w-44 h-44 rounded-3xl" src="./public/assets/n2.jpg" alt="">
@@ -51,7 +50,7 @@
             Under the Green Innovation and Renewable Systems program, FISMPC installed solar microgrid systems and water purifiers in 10 rural barangays, bringing clean energy and water solutions to these communities.
           </p>
           <button onclick="toggleDetails(event, 'detail_1')"
-            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 py-1">
+            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 md:px-18 py-1">
             View
           </button>
         </div>
@@ -67,7 +66,7 @@
             Our annual innovation festival attracted over 5,000 participants. Inventors nationwide showcased their inventions and attended seminars on patent filing and business development. Youth inventor awards were given to
           </p>
           <button onclick="toggleDetails(event, 'detail_2')"
-            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 py-1">
+            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 md:px-18 py-1">
             View
           </button>
         </div>
@@ -83,7 +82,7 @@
             We launched our new online portal and blockchain-based IP timestamping system, making it easier for members to register, pay dues, and access learning resources from anywhere.
           </p>
           <button onclick="toggleDetails(event, 'detail_3')"
-            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 py-1">
+            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 md:px-18 py-1">
             View
           </button>
         </div>
@@ -99,7 +98,7 @@
             FISMPC opened the NICCH in Quezon City as a one-stop innovation center for Filipino inventors. The facility features an innovation showroom, co-working and prototyping spaces, and an online marketplace.
           </p>
           <button onclick="toggleDetails(event, 'detail_4')"
-            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 py-1">
+            class="text-white rounded-xl bg-[#033E94] hover:bg-blue-600 shadow-md text-xl px-40 md:px-18 py-1">
             View
           </button>
         </div>

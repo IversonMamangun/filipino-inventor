@@ -1,5 +1,5 @@
 <div class="relative">
-  <img src="public/assets/gallery.jpg" alt="" class="w-full h-auto sm:h-[15rem]">
+  <img src="public/assets/gallery.jpg" alt="" class="w-full h-auto z">
 
   <div class="absolute inset-0 flex flex-col items-center justify-center px-2 text-center mb-2">
     <h1 class="text-white text-3xl md:text-4xl font-bold drop-shadow-lg mb-4">
@@ -154,37 +154,30 @@
 
 <h1 class="text-5xl font-bold mx-[8%] my-10 text-[#033E94]">Photo</h1>
 
-<div class="grid grid-cols-2 md:grid-cols-1 gap-4 h-screen-auto p-[6%] shadow-lg">
-  <!-- First column: Whole size image -->
-  <div class="relative w-full h-full col-span-1 md:col-span-2">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-10 xl:px-[15%] shadow-lg transition duration-500 ease-in-out 
+            transform">
+  <!-- Row 1 / Column 1: Whole size image -->
+  <div class="relative w-full h-full">
     <img src="./public/assets/pp1.jpg" alt="Large Image"
       class="w-full h-full object-cover p-4 shadow-xl">
 
-    <div class="absolute top-10 md:top-15 bg-yellow-500 bg-gradient-to-tr 
+    <div class="absolute top-10 lg:top-15 bg-gradient-to-tr 
       from-yellow-500 via-yellow-300 to-yellow-600
-      text-white px-6 py-2 rounded-br-full text-2xl md:text-4xl md:px-13 font-bold">
+      text-white px-6 py-2 rounded-br-full text-2xl lg:text-4xl lg:px-13 font-bold">
       HIGHLIGHTS
     </div>
   </div>
 
-  <!-- Second column: 4 smaller images -->
-  <div class="grid grid-cols-2 grid-rows-2 gap-4 col-span-1">
-    <div>
-      <img src="./public/assets/pp1.jpg" alt="Image 1" class="w-full h-full object-cover p-4 shadow-xl">
-    </div>
-    <div>
-      <img src="./public/assets/pp1.jpg" alt="Image 2" class="w-full h-full object-cover p-4 shadow-xl">
-    </div>
-    <div>
-      <img src="./public/assets/pp1.jpg" alt="Image 3" class="w-full h-full object-cover p-4 shadow-xl">
-    </div>
-    <div>
-      <img src="./public/assets/pp1.jpg" alt="Image 4" class="w-full h-full object-cover p-4 shadow-xl">
-    </div>
+  <!-- Row 2 / Column 2: 4 smaller images -->
+  <div class="grid grid-cols-2 grid-rows-2 gap-4">
+    <img src="./public/assets/pp1.jpg" alt="Image 1" class="w-full h-full object-cover p-4 shadow-xl">
+    <img src="./public/assets/pp1.jpg" alt="Image 2" class="w-full h-full object-cover p-4 shadow-xl">
+    <img src="./public/assets/pp1.jpg" alt="Image 3" class="w-full h-full object-cover p-4 shadow-xl">
+    <img src="./public/assets/pp1.jpg" alt="Image 4" class="w-full h-full object-cover p-4 shadow-xl">
   </div>
 
   <!-- Full-width row for button -->
-  <div class="col-span-2 flex justify-center mt-6">
+  <div class="col-span-1 lg:col-span-2 flex justify-center mt-6">
     <button type="submit"
       class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 
              shadow-md font-semibold rounded-xl text-xl px-8 py-3">

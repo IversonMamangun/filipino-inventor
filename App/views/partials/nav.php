@@ -11,7 +11,7 @@
 
   <!-- 2nd: Navigation Menu -->
   <div class="hidden lg:flex flex-grow justify-center" id="navbar-sticky">
-    <ul class="flex space-x-8 lg:space-x-2  font-medium">
+<ul class="flex space-x-2 lg:space-x-4 2xl:space-x-8 font-medium">
       <li><a href="./" class="text-[#033E94] hover:text-fg-brand pl-1">Home</a></li>
       <li><a href="#" class="hover:text-fg-brand">About Us</a></li>
       <li><a href="#" class="hover:text-fg-brand">Program & Services</a></li>

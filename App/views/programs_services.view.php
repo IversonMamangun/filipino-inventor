@@ -1,11 +1,11 @@
 <div class="relative">
   <img src="public/assets/productsandservices.jpg" alt="" class="w-full h-auto">
 
-  <div class="absolute inset-0 flex flex-col items-center justify-end px-4 text-center">
-    <h1 class="text-white text-xl sm:text-2xl md:text-4xl font-bold drop-shadow-lg mb-1 sm:mb-2 md:mb-3">
+  <div class="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+    <h1 class="text-white text-xl sm:text-2xl md:text-4xl 2xl:text-6xl xl:text-5xl font-bold drop-shadow-lg mb-1 sm:mb-2 md:mb-3">
       PROGRAMS & SERVICES
     </h1>
-    <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg max-w-sm sm:max-w-md md:max-w-xl drop-shadow-md mb-2 sm:mb-4 md:mb-6">
+    <p class="text-white text-xs sm:text-sm md:text-base 2xl:text-4xl 2xl:max-w-[80%] xl:max-w-[80%] xl:text-3xl lg:text-xl max-w-sm sm:max-w-md md:max-w-xl drop-shadow-md mb-2 sm:mb-4 md:mb-6">
       FISMPC offers a wide range of programs and services to support our members at every stage of innovation.
     </p>
   </div>
