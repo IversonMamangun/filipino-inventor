@@ -9,7 +9,7 @@
 </div>
 <div class="flex justify-center p-4 sm:p-8 bg-gray-100">
   <!-- Responsive grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0 w-full max-w-7xl">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-0 w-full max-w-7xl">
 
     <!-- Column 1: highlight card -->
     <div class="px-4 md:px-8">
@@ -41,7 +41,7 @@
     <div class="flex flex-wrap gap-4 h-[600px] overflow-y-auto pr-2 md:mt-3 md:px-7
     ">
       <!-- Card 1 -->
-      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-xl">
+      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-auto">
         <img class="object-cover w-44 h-44 rounded-3xl" src="./public/assets/n2.jpg" alt="">
         <div class="p-2 text-start flex flex-col justify-between">
           <h2 class="text-xl font-bold text-[#D70328]">Jan 2025</h2>
@@ -57,7 +57,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-xl">
+      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-auto">
         <img class="object-cover w-44 h-44 rounded-3xl" src="./public/assets/n3.jpg" alt="">
         <div class="p-2 text-start flex flex-col justify-between">
           <h2 class="text-xl font-bold text-[#D70328]">March 2025</h2>
@@ -73,7 +73,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-xl">
+      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-auto">
         <img class="object-cover w-44 h-44 rounded-3xl" src="./public/assets/n4.jpg" alt="">
         <div class="p-2 text-start flex flex-col justify-between">
           <h2 class="text-xl font-bold text-[#D70328]">May 2025</h2>
@@ -89,7 +89,7 @@
       </div>
 
       <!-- Card 4 (✨ removed hidden so it shows when scrolling) -->
-      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-xl" id="hiddenCard">
+      <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-auto" id="hiddenCard">
         <img class="object-cover w-44 h-44 rounded-3xl" src="./public/assets/p5.jpg" alt="">
         <div class="p-2 text-start flex flex-col justify-between">
           <h2 class="text-xl font-bold text-[#D70328]">July 2025</h2>
