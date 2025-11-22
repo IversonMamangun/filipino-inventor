@@ -1,7 +1,7 @@
 <div class="relative">
-  <img src="public/assets/gallery.jpg" alt="" class="w-full h-auto z">
+  <img src="public/assets/gallery.jpg" alt="" class="w-full h-auto md:h-[16rem]">
 
-  <div class="absolute inset-0 flex flex-col items-center justify-center px-2 text-center mb-2">
+  <div class="absolute inset-0 flex flex-col items-center justify-center px-2 text-center mb-2 md:h-[15rem]">
     <h1 class="text-white text-3xl md:text-4xl font-bold drop-shadow-lg mb-4">
       Gallery
     </h1>

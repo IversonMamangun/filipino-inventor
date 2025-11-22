@@ -119,18 +119,6 @@
   }
 </script>
 
-<!-- Navigation Buttons -->
-<button onclick="scrollCarousel(-1)"
-  class="-mx-10 absolute left-5 top-1/2 -translate-y-1/2 rounded-full rounded-full shadow-md hover:bg-gray-200">
-  <img src="public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
-</button>
-
-<button onclick="scrollCarousel(1)"
-  class="-mx-8 absolute right-5 top-1/2 -translate-y-1/2 rounded-full rounded-full shadow-md hover:bg-gray-200">
-  <img src="public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
-</button>
-</div>
-
 <!-- Carousel Script -->
 <script>
   const carousel = document.getElementById('carousel');

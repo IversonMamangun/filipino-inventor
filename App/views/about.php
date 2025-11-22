@@ -1,4 +1,4 @@
-<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center my-10 text-[#033E94]">
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center my-10 md:my-2 text-[#033E94]">
   ABOUT US
 </h1>
 
@@ -7,7 +7,7 @@
   <div class="grid grid-rows-2 gap-8">
     <!-- First block -->
     <div class="bg-white shadow-2xl rounded-lg p-6 text-start">
-      <p class="text-base sm:text-lg md:text-xl leading-relaxed text-[#033E94]">
+      <p class="text-md sm:text-lg md:text-3xl 2xl:text-3xl xl:text-3xl leading-relaxed text-[#033E94]">
         FISMPC began in 2011 under the guiding spirit of the Filipino Investors Society (FIS),
         the country's pioneer organization for inventors and creative technologists.
         We were conceived as the socio-economic arm of FIS to empower Filipino innovators
@@ -30,7 +30,7 @@
 
         <!-- Gradient background with text -->
         <div class="flex-1 bg-gradient-to-r from-[#DE9F1B] via-[#DE9F1B]/80 to-transparent">
-          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white py-2 pl-24 sm:pl-28">
+          <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white py-2 pl-24 sm:pl-28">
             OUR VISION
           </h2>
         </div>
@@ -38,7 +38,7 @@
 
       <!-- Text content -->
       <div class="w-full p-6">
-        <p class="text-lg sm:text-xl md:text-2xl text-start leading-relaxed text-white">
+        <p class="text-lg sm:text-xl md:text-4xl 2xl:text-5xl xl:text-3xl text-start leading-relaxed text-white">
           To build a globally recognized innovation cooperative that transforms Filipino inventors
           into sustainable industries, uplifts communities, and strengthens the nation's self-reliance
           through science, creativity, and cooperative unity.
@@ -74,7 +74,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
+        <p class="text-lg sm:text-xl md:text-3xl 2xl:text-4xl xl:text-3xl text-white leading-relaxed">
           To empower Filipino inventors and innovators through cooperative enterprise, technology incubation, and market linkages.
         </p>
       </div>
@@ -84,7 +84,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
+        <p class="text-lg sm:text-xl md:text-3xl 2xl:text-4xl xl:text-3xl text-white leading-relaxed">
           To bridge invention and industry by supporting product development, intellectual property protection, and commercialization.
         </p>
       </div>
@@ -94,7 +94,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
+        <p class="text-lg sm:text-xl md:text-3xl 2xl:text-4xl xl:text-3xl text-white leading-relaxed">
           To create inclusive prosperity by mobilizing national talent and resources toward sustainable and socially responsible innovation.
         </p>
       </div>
@@ -104,7 +104,7 @@
           <circle cx="12" cy="12" r="10" fill="#16a34a" />
           <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p class="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
+        <p class="text-lg sm:text-xl md:text-3xl 2xl:text-4xl xl:text-3xl text-white leading-relaxed">
           To promote a culture of invention and creativity among Filipinos, especially the youth, in line with national development goals.
         </p>
       </div>
@@ -112,7 +112,7 @@
 
     <!-- Button -->
     <div class="flex justify-center mb-8">
-      <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-base sm:text-lg md:text-xl font-semibold px-6 sm:px-8 py-2 sm:py-3 focus:outline-none">
+      <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-base sm:text-lg md:text-3xl font-semibold px-6 sm:px-8 py-2 sm:py-3 focus:outline-none">
         More About Us?
       </button>
     </div>

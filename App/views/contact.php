@@ -1,7 +1,7 @@
 <h1 class="text-4xl font-bold text-center my-10 text-[#033E94]">CONTACT US</h1>
 
 <!-- Parent column -->
-<div class="max-w-6xl mx-auto rounded-xl p-8
+<div class="max-w-6xl mx-auto my-10 rounded-xl p-7
 bg-gradient-to-r from-white from-[80%] to-transparent to-[70%]">
   <!-- Flex wrapper instead of grid -->
   <div class="flex flex-col md:flex-row gap-8">
@@ -55,7 +55,7 @@ bg-gradient-to-r from-white from-[80%] to-transparent to-[70%]">
 
         <div class="flex justify-end mt-4">
           <button type="submit"
-            class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 shadow-md font-larger rounded-3xl text-sm px-15 py-3">
+            class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 shadow-md font-larger rounded-3xl text-sm px-15 py-3 absolute transform -translate-y-1/10 z-10">
             Send
           </button>
         </div>
