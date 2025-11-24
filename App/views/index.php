@@ -6,7 +6,7 @@
 
   <div class="absolute transition-all duration-300 ease-in-out inset-0 flex flex-col items-center justify-center 
             px-2 sm:px-4 text-center 
-            mt-24 sm:mt-32 md:mt-40 lg:mt-48 xl:mt-30 2xl:mt-15">
+            mt-24 sm:mt-32 md:mt-40 lg:mt-48 xl:mt-30 2xl:mt-35">
     <!-- Heading -->
     <h1 class="text-white 
              text-base sm:text-xl md:text-7xl lg:text-5xl xl:text-6xl  

@@ -1,4 +1,4 @@
-<div id="program-services" class="py-20">
+<div id="program-services">
 <div class="relative">
   <img src="public/assets/productsandservices.jpg" alt="" class="w-full h-auto">
 

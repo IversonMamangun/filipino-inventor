@@ -1,4 +1,4 @@
-<div id="about" class="py-10">
+<div id="about">
 <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-5xl xl:text-5xl font-bold text-center my-10 xl:mb-7 md:my-2 text-[#033E94]">
   ABOUT US
 </h1>
