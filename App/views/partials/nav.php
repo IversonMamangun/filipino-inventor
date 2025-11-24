@@ -13,10 +13,8 @@
   </div>
 
   <!-- 2nd: Navigation Menu -->
-  <div id="navbar-sticky" 
-       class="hidden flex-col xl:flex xl:flex-row flex-grow justify-center 
-              transition-all duration-500 ease-in-out transform origin-top scale-y-0 opacity-0">
-    <ul class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 lg:space-y-8 xl:space-x-4 font-medium xl:mt-0 lg:mt-20 lg:align-center ">
+  <div class="hidden flex-col xl:flex xl:flex-row flex-grow justify-center" id="navbar-sticky">
+  <ul class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 lg:space-y-8 xl:space-x-4 font-medium xl:mt-0 lg:mt-20 lg:align-center ">
       <li><a href="./" class="text-[#033E94] hover:text-fg-brand pl-1">Home</a></li>
       <li><a href="#about" class="hover:text-fg-brand">About Us</a></li>
       <li><a href="#program-services" class="hover:text-fg-brand">Program & Services</a></li>
@@ -37,22 +35,21 @@
       Join us
     </button>
     <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" data-collapse-toggle="navbar-sticky" 
-            type="button" 
-            class="xl:hidden p-2 w-10 h-10 md:w-20 md:h-20 flex items-center justify-center rounded-lg hover:bg-neutral-secondary-soft focus:ring-2 focus:ring-neutral-tertiary">
-      <svg id="menu-icon" 
-           class="h-6 w-6 md:w-20 md:h-20 transition-transform duration-500 ease-in-out" 
-           xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
-      </svg>
-    </button>
+<button id="menu-toggle" data-collapse-toggle="navbar-sticky" 
+        type="button" 
+        class="xl:hidden p-2 w-10 h-10 md:w-20 md:h-20 flex items-center justify-center rounded-lg hover:bg-neutral-secondary-soft focus:ring-2 focus:ring-neutral-tertiary">
+  <svg id="menu-icon" 
+       class="h-6 w-6 md:w-20 md:h-20 transition-transform duration-500 ease-in-out" 
+       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+  </svg>
+</button>
   </div>
 
 </div>
 </nav>
 
 <script>
-  // Scroll animation for navbar position
   window.addEventListener("scroll", function() {
     const navbar = document.getElementById("navbar");
     if (window.scrollY > 50) {
@@ -64,28 +61,10 @@
     }
   });
 
-  // Mobile menu toggle
-  const menuToggle = document.getElementById("menu-toggle");
+    const menuToggle = document.getElementById("menu-toggle");
   const menuIcon = document.getElementById("menu-icon");
-  const navbarSticky = document.getElementById("navbar-sticky");
 
   menuToggle.addEventListener("click", () => {
-    // Rotate icon
     menuIcon.classList.toggle("rotate-90");
-
-    // Smooth show/hide navbar
-    if (navbarSticky.classList.contains("hidden")) {
-      navbarSticky.classList.remove("hidden");
-      setTimeout(() => {
-        navbarSticky.classList.remove("scale-y-0", "opacity-0");
-        navbarSticky.classList.add("scale-y-100", "opacity-100");
-      }, 10);
-    } else {
-      navbarSticky.classList.remove("scale-y-100", "opacity-100");
-      navbarSticky.classList.add("scale-y-0", "opacity-0");
-      setTimeout(() => {
-        navbarSticky.classList.add("hidden");
-      }, 500); // match duration-500
-    }
   });
 </script>
