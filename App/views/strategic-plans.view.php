@@ -9,7 +9,7 @@
   Looking ahead to 2027-2028, FISMPC has set an ambitious strategic agenda to make Filipino inventions drivers of national productivity, global competitiveness, and cooperative prosperity. Our strategy is built on four pillars:
   <strong>Innovation Commercialization & Technology Transfer; Sustainable Cooperative Enterprise & Green Manufacturing; Digital Transformation & Inclusive Market Access; and Capacity Building & Policy Advocacy for Inventors.</strong>
 </p>
-<div class="h-auto px-[14%] bg-cover bg-center relative shadow-lg"
+<div class="h-auto xl:px-[14%] md:px-[10%] bg-cover bg-center relative shadow-lg"
   style="background-image: url('public/assets/news.jpg');">
   <div class="relative w-full h-auto">
     <div id="slides">
@@ -601,8 +601,8 @@
     </button>
   </div>
 </div>
-<div class="bg-white shadow-md px-8 p-6">
-  <p class="text-gray-700 text-base leading-relaxed text-center">
+<div class="bg-white shadow-md px-10 p-8">
+  <p class="text-gray-700 text-base leading-relaxed text-center xl:text-xl">
     Together, these stratigic programs ensure that FISMPC continues to empower Filipino inventors and drive sustainable, innovation across the country.
   </p>
 </div>

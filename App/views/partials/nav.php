@@ -8,26 +8,26 @@
   <!-- 1st: Logo -->
   <div class="flex-shrink-0">
     <a href="./" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="public/assets/navlogo.png" class="h-12 md:h-25 lg:h-15 xl:h-13" alt="Logo of Filipino Investor">
+      <img src="public/assets/navlogo.png" class="h-12 md:h-20 lg:h-15 xl:h-13" alt="Logo of Filipino Investor">
     </a>
   </div>
 
   <!-- 2nd: Navigation Menu -->
   <div class="hidden flex-col xl:flex xl:flex-row flex-grow justify-center" id="navbar-sticky">
-  <ul class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 lg:space-y-8 xl:space-x-4 font-medium xl:mt-0 lg:mt-20 lg:align-center ">
-      <li><a href="./" class="text-[#033E94] hover:text-fg-brand pl-1">Home</a></li>
-      <li><a href="#about" class="hover:text-fg-brand">About Us</a></li>
-      <li><a href="#program-services" class="hover:text-fg-brand">Program & Services</a></li>
-      <li><a href="#strategic-plans" class="hover:text-fg-brand">Strategic Plans 2027-2028</a></li>
-      <li><a href="#testimonials" class="hover:text-fg-brand">Testimonials</a></li>
-      <li><a href="#news-updates" class="hover:text-fg-brand">News & Updates</a></li>
-      <li><a href="#gallery" class="hover:text-fg-brand">Gallery</a></li>
-      <li><a href="#contact" class="hover:text-fg-brand">Contact Us</a></li>
-    </ul>
+  <ul id="nav" class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 lg:space-y-8 md:space-y-10 xl:space-x-4 font-medium xl:mt-0 lg:mt-20 md:mt-22 lg:align-center">
+  <li><a href="./" class="nav-link text-[#033E94] hover:text-fg-brand pl-1">Home</a></li>
+  <li><a href="#about" class="nav-link hover:text-fg-brand">About Us</a></li>
+  <li><a href="#program-services" class="nav-link hover:text-fg-brand">Program & Services</a></li>
+  <li><a href="#strategic-plans" class="nav-link hover:text-fg-brand">Strategic Plans 2027-2028</a></li>
+  <li><a href="#testimonials" class="nav-link hover:text-fg-brand">Testimonials</a></li>
+  <li><a href="#news-updates" class="nav-link hover:text-fg-brand">News & Updates</a></li>
+  <li><a href="#gallery" class="nav-link hover:text-fg-brand">Gallery</a></li>
+  <li><a href="#contact" class="nav-link hover:text-fg-brand">Contact Us</a></li>
+</ul>
   </div>
 
   <!-- 3rd: Login + Join Us + Mobile Menu -->
-  <div class="flex items-center space-x-4">
+  <div class="flex items-center md:items-start space-x-4">
     <a href="login" class="text-blue-900 rounded-md px-4 py-2 md:text-4xl xl:text-lg text-base font-medium hover:text-[#022e6f] transition">
       Log in
     </a>
@@ -66,5 +66,13 @@
 
   menuToggle.addEventListener("click", () => {
     menuIcon.classList.toggle("rotate-90");
+  });
+
+    const links = document.querySelectorAll("#nav .nav-link");
+  links.forEach(link => {
+    link.addEventListener("click", function() {
+      links.forEach(l => l.classList.remove("text-[#033E94]"));
+      this.classList.add("text-[#033E94]"); // active style
+    });
   });
 </script>

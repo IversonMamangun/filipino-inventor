@@ -13,7 +13,7 @@
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-0 w-full max-w-7xl">
 
     <!-- Column 1: highlight card -->
-    <div class="px-4 md:px-8">
+    <div class="px-4 md:px-1">
       <div class="bg-white rounded-3xl shadow-xs">
         <a href="#" class="relative block">
           <img class="rounded-t-2xl w-full h-60 md:h-75 object-cover" src="./public/assets/n1.jpg" alt="" />
@@ -39,7 +39,7 @@
 
     <!-- Column 2: stack of cards -->
     <!-- ✨ Added fixed height + scroll -->
-    <div class="flex flex-wrap gap-4 h-[600px] overflow-y-auto pr-2 md:mt-3 md:px-7
+    <div class="flex flex-wrap gap-4 h-[600px] overflow-y-auto pr-2 md:px-1
     ">
       <!-- Card 1 -->
       <div class="bg-white rounded-3xl shadow-xs flex flex-row max-w-auto">

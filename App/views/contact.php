@@ -3,9 +3,10 @@
 
   <!-- Parent column -->
   <div class="max-w-6xl mx-auto my-10 rounded-xl p-7
-bg-gradient-to-r from-white from-[80%] to-transparent to-[70%]">
+    lg:bg-gradient-to-r from-white from-[80%] to-transparent to-[70%]
+     md:bg-none">
     <!-- Flex wrapper instead of grid -->
-    <div class="flex flex-col md:flex-row gap-8">
+    <div class="flex flex-col lg:flex-row gap-8 lg:bg-transparent md:bg-white lg:p-1 md:p-10">
 
       <!-- LEFT SIDE: Contact Form -->
       <div class="flex-1">
@@ -53,20 +54,22 @@ bg-gradient-to-r from-white from-[80%] to-transparent to-[70%]">
               class="w-full rounded-3xl border border-gray-300 p-3 focus:border-[#033E94] focus:ring-[#033E94] shadow-xl"
               placeholder="Message..."></textarea>
           </div>
-
-          <div class="flex justify-end mt-4">
+          <div class="flex justify-end mt-4 relative">
             <button type="submit"
-              class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 shadow-md font-larger rounded-3xl text-sm px-15 py-3 absolute transform -translate-y-1/10 z-10">
+              class="text-white bg-[#033E94] hover:bg-blue-900 focus:ring-4 focus:ring-blue-300 shadow-md font-larger rounded-3xl text-sm px-6 py-3 md:px-15 md:text-lg
+                    lg:absolute lg:transform lg:-translate-y-1/10 lg:z-10
+                    md:static md:transform-none md:translate-y-0">
               Send
             </button>
           </div>
+
+
         </form>
       </div>
 
       <!-- RIGHT SIDE: Event Card -->
-      <div class="flex-1 relative">
-        <div class="bg-[#033E94] rounded-xl shadow-lg p-6 w-full max-w-md 
-                  absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
+  <div class="flex-1">
+    <div class="bg-[#033E94] rounded-xl shadow-lg p-6 w-full max-w-md md:max-w-full">
           <p class="text-xl font-bold mb-8 text-white">
             Visit our office or drop us a line:
           </p>

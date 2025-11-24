@@ -115,7 +115,7 @@
 
       <!-- Button -->
       <div class="flex justify-center mb-8">
-        <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-base sm:text-lg xl:text-lg lg:text-2xl md:text-5xl font-semibold px-6 sm:px-8 py-2 sm:py-3 md:py-7 lg:py-5 xl:py-3 focus:outline-none">
+        <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-base sm:text-lg xl:text-lg lg:text-2xl md:text-4xl font-semibold px-6 sm:px-8 py-2 sm:py-3 md:py-7 lg:py-5 xl:py-3 focus:outline-none">
           More About Us?
         </button>
       </div>
