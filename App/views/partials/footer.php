@@ -9,7 +9,7 @@
       <!-- Title + Tagline stacked inside -->
       <div>
         <span class="block text-heading text-3xl font-semibold text-white">
-          FILIPINO INVESTOR SOCIETY MULTI-PURPOSE COOPERATIVE
+          FILIPINO INVENTORS SOCIETY MULTI-PURPOSE COOPERATIVE
         </span>
         <i class="block text-xl text-white">"Investing the Future, Empowering the Nation."</i>
       </div>
@@ -39,6 +39,6 @@
 
   <!-- Bottom Bar -->
   <div class="w-full bg-white text-center text-sm text-[#033E94] py-4 border-t border-gray-300">
-    © 2025 <a href="./" class="hover:underline ">FILIPINO INVESTOR SOCIETY MULTI-PURPOSE COOPERATIVE</a>. All Rights Reserved.
+    © 2025 <a href="./" class="hover:underline ">FILIPINO INVENTORS SOCIETY MULTI-PURPOSE COOPERATIVE</a>. All Rights Reserved.
   </div>
 </footer>

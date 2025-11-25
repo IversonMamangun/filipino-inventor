@@ -46,7 +46,7 @@
 
   <!-- Column 2: full height -->
   <div class="grid grid-rows-1 bg-[#DE9F1B] shadow-xl rounded-lg">
-    <div class="grid grid-rows-[auto_1fr] max-h-screen">
+    <div class="grid grid-rows-[auto_1fr] max-h-auto">
       <!-- Header -->
       <div class="relative flex items-center w-full mb-4 mt-6">
         <!-- Floating Image -->

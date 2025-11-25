@@ -69,7 +69,7 @@
 
       <!-- RIGHT SIDE: Event Card -->
   <div class="flex-1">
-    <div class="bg-[#033E94] rounded-xl shadow-lg p-6 w-full max-w-md md:max-w-full">
+    <div class="bg-[#033E94] rounded-xl shadow-lg p-6 w-full max-w-md md:max-w-full lg:max-w-md">
           <p class="text-xl font-bold mb-8 text-white">
             Visit our office or drop us a line:
           </p>

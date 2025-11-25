@@ -591,13 +591,13 @@
   <!-- Navigation arrows (outside slides) -->
   <div class="absolute inset-y-0 left-0 flex items-center px-8">
     <button class="prev-btn bg-white rounded-full shadow-md hover:bg-gray-200">
-      <img src="./public/assets/leftarrow.png" alt="Previous" class="w-15 h-15" />
+      <img src="./public/assets/leftarrow.png" alt="Previous" class="w-20 h-20" />
     </button>
   </div>
 
   <div class="absolute inset-y-0 right-0 flex items-center px-8">
     <button class="next-btn bg-white rounded-full shadow-md hover:bg-gray-200">
-      <img src="./public/assets/rightarrow.png" alt="Next" class="w-15 h-15" />
+      <img src="./public/assets/rightarrow.png" alt="Next" class="w-20 h-20" />
     </button>
   </div>
 </div>
