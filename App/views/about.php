@@ -3,18 +3,13 @@
   ABOUT US
 </h1>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:gap-2 lg:px-2 xl:gap-10 xl:px-10 mb-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:gap-2 lg:px-2 xl:gap-8 xl:px-20 mb-8">
   <!-- Column 1: two rows -->
   <div class="grid grid-rows-1 gap-8">
     <!-- First block -->
     <div class="bg-white shadow-2xl rounded-lg p-6 text-start">
       <p class="text-md lg:text-2xl  md:text-4xl 2xl:text-xl xl:text-xl leading-relaxed text-[#033E94]">
-        FISMPC began in 2011 under the guiding spirit of the Filipino Investors Society (FIS),
-        the country's pioneer organization for inventors and creative technologists.
-        We were conceived as the socio-economic arm of FIS to empower Filipino innovators
-        by supporting invention-based enterprises and sustainable livelihoods.
-        Over the years, our cooperative has nurtured countless inventors,
-        helping them take ideas from the lab or workshop to the marketplace.
+        FISMPC began in 2011 under the guiding spirit of the Filipino Inventors Society (FIS), the country’s pioneer organization for inventors and creative technologists. We were conceived as the socio-economic arm of FIS to empower Filipino innovators by supporting invention-based enterprises and sustainable livelihoods. Over the years, our cooperative has nurtured countless inventors, helping them take ideas from the lab or workshop to the marketplace. 
       </p>
     </div>
 
@@ -39,7 +34,7 @@
 
 
       <div class="w-full p-6">
-        <p class="text-lg sm:text-xl md:text-4xl lg:text-2xl 2xl:text-xl xl:text-xl text-start leading-relaxed text-white">
+        <p class="text-lg sm:text-xl md:text-4xl lg:text-2xl xl:text-xl text-start leading-relaxed text-white">
           To build a globally recognized innovation cooperative that transforms Filipino inventors
           into sustainable industries, uplifts communities, and strengthens the nation's self-reliance
           through science, creativity, and cooperative unity.
@@ -51,7 +46,7 @@
 
   <!-- Column 2: full height -->
   <div class="grid grid-rows-1 bg-[#DE9F1B] shadow-xl rounded-lg">
-    <div>
+    <div class="grid grid-rows-[auto_1fr] max-h-screen">
       <!-- Header -->
       <div class="relative flex items-center w-full mb-4 mt-6">
         <!-- Floating Image -->
@@ -114,12 +109,11 @@
       </div>
 
       <!-- Button -->
-      <div class="flex justify-center mb-8">
-        <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-base sm:text-lg xl:text-lg lg:text-2xl md:text-4xl font-semibold px-6 sm:px-8 py-2 sm:py-3 md:py-7 lg:py-5 xl:py-3 focus:outline-none">
-          More About Us?
-        </button>
-      </div>
-    </div>
+  <div class="flex justify-center items-end mb-8">
+    <button type="button" class="text-[#785402] bg-white hover:bg-[#FFCC00] rounded-2xl focus:ring-4 focus:ring-[#DE9F1B] shadow-2xl text-base sm:text-lg xl:text-lg lg:text-2xl md:text-4xl font-semibold px-6 sm:px-8 py-2 sm:py-3 md:py-7 lg:py-5 xl:py-3 focus:outline-none">
+      More About Us?
+    </button>
+  </div>
   </div>
 </div>
 </div>

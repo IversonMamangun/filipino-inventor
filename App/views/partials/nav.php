@@ -18,7 +18,7 @@
   <li><a href="./" class="nav-link text-[#033E94] hover:text-fg-brand pl-1">Home</a></li>
   <li><a href="#about" class="nav-link hover:text-fg-brand">About Us</a></li>
   <li><a href="#program-services" class="nav-link hover:text-fg-brand">Program & Services</a></li>
-  <li><a href="#strategic-plans" class="nav-link hover:text-fg-brand">Strategic Plans 2027-2028</a></li>
+  <li><a href="#strategic-plans" class="nav-link hover:text-fg-brand">Strategic Plans 2026-2028</a></li>
   <li><a href="#testimonials" class="nav-link hover:text-fg-brand">Testimonials</a></li>
   <li><a href="#news-updates" class="nav-link hover:text-fg-brand">News & Updates</a></li>
   <li><a href="#gallery" class="nav-link hover:text-fg-brand">Gallery</a></li>
