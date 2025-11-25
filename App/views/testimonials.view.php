@@ -118,8 +118,10 @@
       behavior: 'smooth'
     });
   }
-// Carousel Script
+</script>
 
+<!-- Carousel Script -->
+<script>
   const carousel = document.getElementById('carousel');
   const cards = carousel.querySelectorAll('.bg-white');
   const cardWidth = cards[0].offsetWidth + 24; // card width + gap
