@@ -68,7 +68,7 @@
       <!-- Mission Statements -->
       <div class="space-y-4 xl:space-y-2 p-6 pl-3">
         <div class="flex items-start gap-2">
-          <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+          <svg class="lg:h-5 lg:w-5 md:h-12 md:w-12 items-center flex-shrink-0" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#16a34a" />
             <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
@@ -78,7 +78,7 @@
         </div>
 
         <div class="flex items-start gap-2">
-          <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+          <svg class="lg:h-5 lg:w-5 md:h-12 md:w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#16a34a" />
             <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="flex items-start gap-2">
-          <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+          <svg class="lg:h-5 lg:w-5 md:h-12 md:w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#16a34a" />
             <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
@@ -98,7 +98,7 @@
         </div>
 
         <div class="flex items-start gap-2">
-          <svg class="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+          <svg class="lg:h-5 lg:w-5 md:h-12 md:w-12 flex-shrink-0" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="10" fill="#16a34a" />
             <path d="M8.5 12.5l2.5 2.5 4.5-5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>

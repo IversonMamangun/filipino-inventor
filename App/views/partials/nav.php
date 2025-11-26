@@ -18,7 +18,7 @@
       class="max-h-0 opacity-0 translate-y-[-20px] overflow-hidden transition-all duration-700 ease-in-out 
             xl:max-h-none xl:opacity-100 xl:translate-y-0 xl:flex xl:flex-row flex-col flex-grow justify-center">
       <ul id="nav" class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 xl:space-x-4 md:space-y-18 md:mt-25 font-medium xl:mt-0 ">
-        <li><a href="./" class="nav-link text-[#033E94] hover:text-fg-brand">Home</a></li>
+        <li><a href="#home" class="nav-link text-[#033E94] hover:text-fg-brand">Home</a></li>
         <li><a href="#about" class="nav-link hover:text-fg-brand">About Us</a></li>
         <li><a href="#program-services" class="nav-link hover:text-fg-brand">Program & Services</a></li>
         <li><a href="#strategic-plans" class="nav-link hover:text-fg-brand">Strategic Plans 2026-2028</a></li>
@@ -30,7 +30,7 @@
     </div>
 
     <!-- Login + Join + Mobile Toggle -->
-    <div class="flex items-center md:items-t space-x-4">
+    <div class="flex items-center md:items-start space-x-4">
       <a href="login" class="text-blue-900 rounded-md px-4 py-2 md:text-4xl xl:text-lg text-base font-medium hover:text-[#022e6f] transition">
         Log in
       </a>
@@ -49,7 +49,6 @@
 </nav>
 
 <script>
-  // Scroll shrink effect
   window.addEventListener("scroll", function() {
     const navbar = document.getElementById("navbar");
     if (window.scrollY > 50) {
@@ -61,7 +60,6 @@
     }
   });
 
-  // Mobile dropdown toggle
   const menuToggle = document.getElementById("menu-toggle");
   const menuIcon = document.getElementById("menu-icon");
   const navbarSticky = document.getElementById("navbar-sticky");
@@ -76,12 +74,30 @@
     navbarSticky.classList.toggle("translate-y-0");
   });
 
-  // Active link highlight
-  const links = document.querySelectorAll("#nav .nav-link");
-  links.forEach(link => {
-    link.addEventListener("click", function() {
-      links.forEach(l => l.classList.remove("text-[#033E94]"));
-      this.classList.add("text-[#033E94]");
-    });
+
+const links = document.querySelectorAll("#nav .nav-link");
+links.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+
+
+    links.forEach(l => l.classList.remove("text-[#033E94]"));
+    this.classList.add("text-[#033E94]");
+
+
+    const targetId = this.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    if (window.innerWidth < 1280) { 
+      menuIcon.classList.remove("rotate-90");
+      navbarSticky.classList.add("max-h-0", "opacity-0", "translate-y-[-20px]");
+      navbarSticky.classList.remove("max-h-screen", "opacity-100", "translate-y-0");
+    }
   });
+});
+
+
 </script>

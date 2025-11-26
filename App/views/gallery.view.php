@@ -80,57 +80,74 @@
     <h1 class="text-5xl font-bold mx-[8%] my-10 text-[#033E94]">Video</h1>
 
     <!-- ✅ Centered Carousel -->
-    <div class="relative max-w-7xl 2xl:max-w-full mx-auto overflow-hidden">
+    <div class="relative max-w-7xl 2xl:max-w-screen-2xl mx-auto overflow-hidden">
       <!-- Carousel wrapper -->
-      <div id="video-carousel" class="flex overflow-x-auto snap-x mx-20 snap-mandatory scroll-smooth justify-center">
+      <div id="video-carousel" class="flex overflow-x-auto snap-x mx-20 snap-mandatory scroll-smooth p-8">
 
         <!-- Slide 1 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 
-        w-full md:w-full lg:w-3/10 p-6 mx-2 snap-center">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 
+            flex-shrink-0 w-full md:w-1/1 xl:w-1/3 p-6 mx-2 snap-center">
           <a href="#" class="relative block">
             <img class="rounded-xl shadow-lg w-full" src="./public/assets/v1.jpg" alt="Green Tech Initiative" />
-            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Green Tech Initiative Icon" />
+            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Play Icon" />
           </a>
-          <h5 class="mt-6 mb-2 text-xl md:text-3xl tracking-tight text-heading flex justify-between items-center">
+          <h5 class="mt-6 mb-2 text-xl md:text-2xl xl:text-xl tracking-tight text-heading flex justify-between items-center">
             <strong>Green Tech Initiative:</strong>
             <span class="">Jan 2025</span>
           </h5>
-          <p class="mb-6 text-body lg:text-lg md:text-xl">
+          <p class="mb-6 text-body xl:text-lg md:text-xl">
             Under the Green Innovation and Renewable System program, FISMPC installed solar microgrid system and water purifiers in 10 rural barangays.
           </p>
         </div>
 
         <!-- Slide 2 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 
-        w-full md:w-full lg:w-3/10 p-6 mx-2 snap-center">
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 
+            flex-shrink-0 w-full md:w-1/1 xl:w-1/3 p-6 mx-2 snap-center">
           <a href="#" class="relative block">
             <img class="rounded-xl shadow-lg w-full" src="./public/assets/v1.jpg" alt="Green Tech Initiative" />
-            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Green Tech Initiative Icon" />
+            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Play Icon" />
           </a>
-          <h5 class="mt-6 mb-2 text-xl md:text-3xl tracking-tight text-heading flex justify-between items-center">
+          <h5 class="mt-6 mb-2 text-xl md:text-2xl xl:text-xl tracking-tight text-heading flex justify-between items-center">
             <strong>Green Tech Initiative:</strong>
             <span class="">Jan 2025</span>
           </h5>
-          <p class="mb-6 text-body md:text-xl">
+          <p class="mb-6 text-body xl:text-lg md:text-xl">
             Under the Green Innovation and Renewable System program, FISMPC installed solar microgrid system and water purifiers in 10 rural barangays.
           </p>
         </div>
 
-        <!-- Slide 3 -->
-        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 flex-shrink-0 
-        w-full md:w-full lg:w-3/10 p-6 mx-2 snap-center">
+
+        <!--  Slide 3 -->
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 
+            flex-shrink-0 w-full md:w-1/1 xl:w-1/3 p-6 mx-2 snap-center">
           <a href="#" class="relative block">
             <img class="rounded-xl shadow-lg w-full" src="./public/assets/v1.jpg" alt="Green Tech Initiative" />
-            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Green Tech Initiative Icon" />
+            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Play Icon" />
           </a>
-          <h5 class="mt-6 mb-2 text-xl md:text-3xl tracking-tight text-heading flex justify-between items-center">
+          <h5 class="mt-6 mb-2 text-xl md:text-2xl xl:text-xl tracking-tight text-heading flex justify-between items-center">
             <strong>Green Tech Initiative:</strong>
             <span class="">Jan 2025</span>
           </h5>
-          <p class="mb-6 text-body md:text-xl">
+          <p class="mb-6 text-body xl:text-lg md:text-xl">
             Under the Green Innovation and Renewable System program, FISMPC installed solar microgrid system and water purifiers in 10 rural barangays.
           </p>
         </div>
+        <!--  Slide 4 -->
+        <div class="bg-white block rounded-3xl shadow-2xl transform transition duration-300 hover:scale-105 
+            flex-shrink-0 w-full md:w-1/1 xl:w-1/3 p-6 mx-2 snap-center">
+          <a href="#" class="relative block">
+            <img class="rounded-xl shadow-lg w-full" src="./public/assets/v1.jpg" alt="Green Tech Initiative" />
+            <img class="absolute inset-0 m-auto w-20 h-20 rounded-full shadow-lg" src="./public/assets/video.png" alt="Play Icon" />
+          </a>
+          <h5 class="mt-6 mb-2 text-xl md:text-2xl xl:text-xl tracking-tight text-heading flex justify-between items-center">
+            <strong>Green Tech Initiative:</strong>
+            <span class="">Jan 2025</span>
+          </h5>
+          <p class="mb-6 text-body xl:text-lg md:text-xl">
+            Under the Green Innovation and Renewable System program, FISMPC installed solar microgrid system and water purifiers in 10 rural barangays.
+          </p>
+        </div>
+
       </div>
 
       <!-- Navigation Buttons -->
@@ -191,6 +208,7 @@
   </div>
 </div>
 
+
 <script>
   function scrollVideoCarousel(direction) {
     const carousel = document.getElementById('video-carousel');
@@ -202,4 +220,32 @@
       behavior: 'smooth'
     });
   }
+
+  // Auto-scroll with looping
+  function autoScrollCarousel() {
+    const carousel = document.getElementById('video-carousel');
+    const card = carousel.querySelector('.bg-white');
+    const cardWidth = card.offsetWidth + 24;
+    const totalCards = carousel.querySelectorAll('.bg-white').length;
+
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex++;
+      if (currentIndex >= totalCards) {
+        currentIndex = 0; // restart at first card
+        carousel.scrollTo({
+          left: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        carousel.scrollTo({
+          left: currentIndex * cardWidth,
+          behavior: 'smooth'
+        });
+      }
+    }, 3000); // every 3 seconds
+  }
+
+  autoScrollCarousel();
 </script>

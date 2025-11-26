@@ -14,7 +14,7 @@
     <div class="relative w-full h-auto">
       <div id="slides">
         <!-- First column: Whole size image -->
-        <div class="slide block relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide block relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
           <!-- Title -->
           <!-- Original -->
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[23.5rem] lg:px-[20rem] sm:px-[20rem] py-6 rounded-br-[40px] text-2xl font-bold">
@@ -86,7 +86,7 @@
           <p class="mt-15 px-6">30 inventions commercialized per year; 100+ MSMEs supported in scaling operations.</p>
         </div>
         <!-- Second coumn: whole size -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[28rem] lg:px-[23.4rem] sm:px-[21.8rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -164,7 +164,7 @@
           </p>
         </div>
         <!-- 3rd -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[27rem] lg:px-[21rem] sm:px-[21rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -234,7 +234,7 @@
           </p>
         </div>
         <!-- 4th  -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[25rem] lg:px-[21.5rem] sm:px-[21.5rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -304,7 +304,7 @@
           </p>
         </div>
         <!-- 5th  -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[24.9rem] lg:px-[21.3rem] sm:px-[21.3rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -371,7 +371,7 @@
           </p>
         </div>
         <!-- 6th  -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[23.5rem] lg:px-[20rem] sm:px-[20rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -439,7 +439,7 @@
           </p>
         </div>
         <!-- 7th  -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[26.5rem] lg:px-[22.6rem] sm:px-[22.6rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -508,7 +508,7 @@
           </p>
         </div>
         <!-- 8th  -->
-        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6">
+        <div class="slide hidden relative p-10 w-full h-auto bg-[#F3F6FA] rounded-2xl p-6 transition-opacity duration-700 ease-in-out">
 
           <div class="-ml-4 absolute top-4 left-0 bg-gray-300 text-white px-[23.6rem] lg:px-[21rem] sm:px-[20.5rem] py-6 rounded-br-[40px] text-2xl font-bold">
           </div>
@@ -607,24 +607,59 @@
     </p>
   </div>
 </div>
+
 <script>
   const slides = document.querySelectorAll('#slides .slide');
   let currentIndex = 0;
+  const intervalTime = 5000; // 5 seconds
+  let autoSlide; // store interval so we can reset when user clicks
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.toggle('hidden', i !== index);
-      slide.classList.toggle('block', i === index);
+      if (i === index) {
+        slide.classList.remove('hidden', 'opacity-0');
+        slide.classList.add('block', 'opacity-100');
+      } else {
+        slide.classList.remove('block', 'opacity-100');
+        slide.classList.add('hidden', 'opacity-0');
+      }
     });
   }
 
-  document.querySelector('.next-btn').addEventListener('click', () => {
+  function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
-  });
+  }
 
-  document.querySelector('.prev-btn').addEventListener('click', () => {
+  function prevSlide() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(currentIndex);
+  }
+
+  // Attach safely (won’t throw if buttons missing)
+  const nextBtn = document.querySelector('.next-btn');
+  const prevBtn = document.querySelector('.prev-btn');
+
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAuto();
   });
+
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAuto();
+  });
+
+  function startAuto() {
+    autoSlide = setInterval(nextSlide, intervalTime);
+  }
+
+  function resetAuto() {
+    clearInterval(autoSlide);
+    startAuto();
+  }
+
+  // Initialize
+  showSlide(currentIndex);
+  startAuto();
 </script>

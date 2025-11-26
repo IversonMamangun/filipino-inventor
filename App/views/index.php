@@ -1,4 +1,4 @@
-<div class="relative ">
+<div id="home" class="relative">
   <img src="public/assets/bg1.jpg" alt="" class="w-full 
          h-40 sm:h-auto md:h-[1800px] lg:h-[600px] xl:h-[650px] 
          object-cover 

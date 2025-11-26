@@ -18,8 +18,8 @@
     <!-- Second Column with 2 child columns for links -->
     <div class="grid grid-cols-2 gap-6 p-6 text-white">
       <div>
-        <h5 class="text-lg font-semibold mb-2">Quick Links</h5>
-        <ul class="space-y-2 text-sm font-medium">
+        <h5 class="text-lg md:text-xl font-semibold mb-2 ">Quick Links</h5>
+        <ul class="space-y-2 text-sm font-medium md:text-lg">
           <li><a href="#" class="hover:underline">Home</a></li>
           <li><a href="#" class="hover:underline">About Us</a></li>
           <li><a href="#" class="hover:underline">Programs & Services</a></li>
@@ -27,7 +27,7 @@
         </ul>
       </div>
       <div>
-        <ul class="space-y-2 text-sm font-medium mt-6">
+        <ul class="space-y-2 text-sm font-medium mt-6 md:text-lg">
           <li><a href="#" class="hover:underline">Testimonials</a></li>
           <li><a href="#" class="hover:underline">News & Updates</a></li>
           <li><a href="#" class="hover:underline">Gallery</a></li>
@@ -38,7 +38,7 @@
   </div>
 
   <!-- Bottom Bar -->
-  <div class="w-full bg-white text-center text-sm text-[#033E94] py-4 border-t border-gray-300">
+  <div class="w-full bg-white text-center text-sm md:text-md text-[#033E94] py-4 border-t border-gray-300">
     © 2025 <a href="./" class="hover:underline ">FILIPINO INVENTORS SOCIETY MULTI-PURPOSE COOPERATIVE</a>. All Rights Reserved.
   </div>
 </footer>
