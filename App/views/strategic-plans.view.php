@@ -451,7 +451,7 @@
         loop: true,
         margin: 45, // 2. THIS ADDS THE GAP (30px)
         autoplay: true,
-        autoplayTimeout: 50000,
+        autoplayTimeout: 10000,
         autoplayHoverPause: true,
         dots: false,
         nav: false,
