@@ -1,142 +1,110 @@
--- Create the database
+/* ============================================================
+   DATABASE: filipino_inventor
+   PURPOSE:  Professional CMS structure for editable pages,
+             content blocks, media library, news, and settings.
+   ============================================================ */
+
 CREATE DATABASE filipino_inventor;
 USE filipino_inventor;
 
--- CMS User (Admin)
-CREATE TABLE cms_users (
+/* ============================================================
+   USERS TABLE
+   - Stores admin/editor accounts
+   - Supports future roles (admin, editor, author)
+   ============================================================ */
+CREATE TABLE users (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  username VARCHAR(100) UNIQUE NOT NULL,
-  password_hash VARCHAR(255) NOT NULL,
-  email VARCHAR(255) UNIQUE NOT NULL,
+  username VARCHAR(100) UNIQUE NOT NULL,   -- Login username
+  password_hash VARCHAR(255) NOT NULL,     -- Hashed password
+  email VARCHAR(255) UNIQUE NOT NULL,      -- User email
+  role ENUM('admin','editor','author') DEFAULT 'admin', -- Permission level
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Home Page
-CREATE TABLE home_page (
+/* ============================================================
+   PAGES TABLE
+   - Stores static pages (Home, About, Contact, etc.)
+   - "slug" is used for routing (e.g., /about, /contact)
+   - "content" is the main body (HTML or JSON)
+   ============================================================ */
+CREATE TABLE pages (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255),
-  body TEXT,
+  slug VARCHAR(255) UNIQUE NOT NULL,       -- URL-friendly identifier
+  title VARCHAR(255),                      -- Page title
+  content LONGTEXT,                        -- Main page content
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- About Us
-CREATE TABLE about_page (
+/* ============================================================
+   CONTENT BLOCKS TABLE
+   - Modular sections inside pages
+   - Replaces many separate tables (programs, testimonials, gallery, etc.)
+   - block_type allows flexible layouts (carousel, card, hero, etc.)
+   ============================================================ */
+CREATE TABLE content_blocks (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  about_text TEXT,
-  vision_text TEXT,
-  mission_text TEXT,
+  page_id INT,                             -- Linked to pages.id
+  block_type VARCHAR(100),                 -- e.g., 'carousel', 'card', 'hero'
+  title VARCHAR(255),                      -- Optional block title
+  body TEXT,                               -- Text content
+  image VARCHAR(255),                      -- Image path
+  video VARCHAR(255),                      -- Video path
+  order_no INT DEFAULT 0,                  -- Display order
+  FOREIGN KEY (page_id) REFERENCES pages(id) ON DELETE CASCADE
+);
+
+/* ============================================================
+   MEDIA LIBRARY
+   - Stores all uploaded images/videos/files
+   - CMS can reuse media across pages
+   ============================================================ */
+CREATE TABLE media (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  file_path VARCHAR(255),                  -- Storage path
+  file_type VARCHAR(50),                   -- image/png, video/mp4, etc.
+  uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+/* ============================================================
+   NEWS / BLOG POSTS
+   - Stores news articles or updates
+   - Includes slug for SEO-friendly URLs
+   ============================================================ */
+CREATE TABLE news (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  slug VARCHAR(255) UNIQUE NOT NULL,       -- URL slug
+  title VARCHAR(255),                      -- News title
+  subtitle VARCHAR(255),                   -- Optional subtitle
+  body TEXT,                               -- Full article content
+  image VARCHAR(255),                      -- Featured image
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Programs & Services
-CREATE TABLE program_services (
+/* ============================================================
+   CONTACT FORM SUBMISSIONS
+   - Stores messages sent from the Contact Us page
+   ============================================================ */
+CREATE TABLE contact_submissions (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  image VARCHAR(255),
-  title VARCHAR(255),
-  description TEXT,
-  footer_text VARCHAR(255),
-  order_no INT DEFAULT 0,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Strategic Plans
-CREATE TABLE strategic_plans (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255),
-  text TEXT,
-  carousel VARCHAR(255),
-  carousel_title VARCHAR(255),
-  carousel_body TEXT,
-  footer_text VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Testimonials
-CREATE TABLE testimonials (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255),
-  carousel VARCHAR(255),
-  carousel_image VARCHAR(255),
-  carousel_name VARCHAR(255),
-  carousel_subname VARCHAR(255),
-  carousel_text TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- News & Updates
-CREATE TABLE news_updates (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  card_image VARCHAR(255),
-  card_title VARCHAR(255),
-  card_subtitle VARCHAR(255),
-  card_text TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Gallery
-CREATE TABLE gallery (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255),
-  text TEXT,
-  video VARCHAR(255),
-  carousel VARCHAR(255),
-  carousel_video VARCHAR(255),
-  carousel_title VARCHAR(255),
-  carousel_text TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Photos
-CREATE TABLE photos (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  col1_image VARCHAR(255),
-  col2_image1 VARCHAR(255),
-  col2_image2 VARCHAR(255),
-  col2_image3 VARCHAR(255),
-  col2_image4 VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Contact Us (form submissions)
-CREATE TABLE contact_us (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255),
-  text TEXT,
   first_name VARCHAR(100),
   last_name VARCHAR(100),
   email VARCHAR(255),
   contact VARCHAR(50),
   subject VARCHAR(255),
   message TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Contact Info (static office info)
-CREATE TABLE contact_info (
+/* ============================================================
+   SITE SETTINGS
+   - Stores global settings like footer text, logo, social links
+   - Key-value structure for maximum flexibility
+   ============================================================ */
+CREATE TABLE site_settings (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  phone_number VARCHAR(50),
-  email_address VARCHAR(255),
-  address TEXT,
-  social_medias TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-
--- Footer
-CREATE TABLE footer (
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(255),
-  logo VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  setting_key VARCHAR(255) UNIQUE NOT NULL,  -- e.g., 'footer_title'
+  setting_value TEXT                          -- JSON or plain text
 );
