@@ -66,7 +66,6 @@
             </el-dropdown>
             <?php endif;?>
   </div>
-
 </nav>
 
 <script>

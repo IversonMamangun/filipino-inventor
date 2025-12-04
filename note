@@ -1,0 +1,142 @@
+-- Create the database
+CREATE DATABASE filipino_inventor;
+USE filipino_inventor;
+
+-- CMS User (Admin)
+CREATE TABLE cms_users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Home Page
+CREATE TABLE home_page (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  body TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- About Us
+CREATE TABLE about_page (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  about_text TEXT,
+  vision_text TEXT,
+  mission_text TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Programs & Services
+CREATE TABLE program_services (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  image VARCHAR(255),
+  title VARCHAR(255),
+  description TEXT,
+  footer_text VARCHAR(255),
+  order_no INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Strategic Plans
+CREATE TABLE strategic_plans (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  text TEXT,
+  carousel VARCHAR(255),
+  carousel_title VARCHAR(255),
+  carousel_body TEXT,
+  footer_text VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Testimonials
+CREATE TABLE testimonials (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  carousel VARCHAR(255),
+  carousel_image VARCHAR(255),
+  carousel_name VARCHAR(255),
+  carousel_subname VARCHAR(255),
+  carousel_text TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- News & Updates
+CREATE TABLE news_updates (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  card_image VARCHAR(255),
+  card_title VARCHAR(255),
+  card_subtitle VARCHAR(255),
+  card_text TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Gallery
+CREATE TABLE gallery (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  text TEXT,
+  video VARCHAR(255),
+  carousel VARCHAR(255),
+  carousel_video VARCHAR(255),
+  carousel_title VARCHAR(255),
+  carousel_text TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Photos
+CREATE TABLE photos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  col1_image VARCHAR(255),
+  col2_image1 VARCHAR(255),
+  col2_image2 VARCHAR(255),
+  col2_image3 VARCHAR(255),
+  col2_image4 VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Contact Us (form submissions)
+CREATE TABLE contact_us (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  text TEXT,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  email VARCHAR(255),
+  contact VARCHAR(50),
+  subject VARCHAR(255),
+  message TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Contact Info (static office info)
+CREATE TABLE contact_info (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  phone_number VARCHAR(50),
+  email_address VARCHAR(255),
+  address TEXT,
+  social_medias TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Footer
+CREATE TABLE footer (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255),
+  logo VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
