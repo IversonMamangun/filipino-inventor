@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Filipino Inventor</title>
-  <link rel="icon" href="assets/navlogo.png">
+  <link rel="icon" href="public/assets/navlogo.png">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
