@@ -28,7 +28,7 @@
         <li><a href="#contact" class="nav-link hover:text-fg-brand">Contact Us</a></li>
       </ul>
     </div>
-    <el-dropdown class="relative ml-3">
+    <el-dropdown class="relative ml-3 md:mt-3 xl:mt-0">
       <?php if ($_SESSION['user'] ?? false) : ?>
         <!-- 
         <button class="relative flex max-w-xs items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
@@ -47,7 +47,7 @@
     <!-- Login + Join + Mobile Toggle -->
     <div class="flex items-center md:items-start space-x-4">
 
-      <button type="button" class="text-white bg-[#033E94] hover:bg-blue-600 rounded-lg xl:px-3 px-6 py-2 md:text-4xl xl:text-lg md:font-medium text-base font-semibold shadow-md transition">
+      <button type="button" class="text-white bg-[#033E94] hover:bg-blue-600 rounded-lg xl:px-3 px-6 py-2 md:mt-2 xl:mt-0 md:text-4xl xl:text-lg md:font-medium text-base font-semibold shadow-md transition">
         Join us
       </button>
       <!-- Mobile Menu Toggle -->

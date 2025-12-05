@@ -8,19 +8,32 @@ CREATE DATABASE filipino_inventor;
 USE filipino_inventor;
 
 /* ============================================================
+   USERS TYPE TABLE
+   - Supports future roles (admin, editor, author)
+   ============================================================ */
+
+CREATE TABLE user_types (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) UNIQUE NOT NULL,        -- Role name (admin, editor, author, etc.)
+  description TEXT                         -- Optional: description of role
+);
+
+/* ============================================================
    USERS TABLE
    - Stores admin/editor accounts
-   - Supports future roles (admin, editor, author)
    ============================================================ */
 CREATE TABLE users (
   id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(100) UNIQUE NOT NULL,   -- Login username
   password_hash VARCHAR(255) NOT NULL,     -- Hashed password
   email VARCHAR(255) UNIQUE NOT NULL,      -- User email
-  role ENUM('admin','editor','author') DEFAULT 'admin', -- Permission level
+  user_type_id INT NOT NULL,               -- FK to user_type
+  status ENUM('active','inactive','banned') DEFAULT 'active', -- Account status
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_type_id) REFERENCES user_types(id)
 );
+
 
 /* ============================================================
    PAGES TABLE
