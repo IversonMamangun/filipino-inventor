@@ -1,14 +1,14 @@
 <?php require_once base_path('views/partials/head.php'); ?>
 
-<button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base ms-3 mt-3 text-sm p-2 focus:outline-none inline-flex sm:hidden">
+<button data-drawer-target="separator-sidebar" data-drawer-toggle="separator-sidebar" aria-controls="separator-sidebar" type="button" class="fixed top-3 left-3 z-50 inline-flex items-center p-2 text-sm text-heading rounded-base lg:hidden hover:bg-neutral-secondary-medium focus:outline-none focus:ring-2 focus:ring-neutral-tertiary">
     <span class="sr-only">Open sidebar</span>
-    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
     </svg>
 </button>
 
-<aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-    <div class="h-full px-3 py-4 overflow-y-auto bg-neutral-primary-soft border-e border-default">
+<aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-neutral-primary-soft border-e border-default" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-[#f5f5f5] border-e border-default">
         <ul class="space-y-2 font-medium">
 
             <!-- Dashboard -->
@@ -255,7 +255,7 @@
     </div>
 </aside>
 
-<div class="p-4 sm:ml-64">
+<div class="p-4 lg:ml-64">
     <section id="home">
         <?php require base_path('views/index.view.php'); ?>
     </section>
@@ -287,8 +287,53 @@
     <section id="contact">
         <?php require base_path('views/contact.view.php'); ?>
     </section>
-
     <?php
     require_once base_path('views/partials/footer.php');
     ?>
 </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawerBtn = document.querySelector('[data-drawer-toggle="separator-sidebar"]');
+            const sidebar = document.getElementById('separator-sidebar');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            const body = document.body;
+
+            const toggleSidebar = () => {
+                // Toggle sidebar visibility
+                sidebar.classList.toggle('-translate-x-full');
+
+                // Toggle Backdrop visibility
+                backdrop.classList.toggle('hidden');
+
+                // Lock body scroll if menu is open (mobile/tablet only)
+                if (!backdrop.classList.contains('hidden')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            };
+
+            // Click on Hamburger
+            if (drawerBtn) {
+                drawerBtn.addEventListener('click', toggleSidebar);
+            }
+
+            // Click on Backdrop (Close menu)
+            if (backdrop) {
+                backdrop.addEventListener('click', () => {
+                    sidebar.classList.add('-translate-x-full');
+                    backdrop.classList.add('hidden');
+                    body.style.overflow = '';
+                });
+            }
+
+            // Your existing dropdown logic...
+            document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-collapse-toggle');
+                    const target = document.getElementById(targetId);
+                    target.classList.toggle('hidden');
+                });
+            });
+        });
+    </script>
