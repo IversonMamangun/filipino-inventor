@@ -9,6 +9,14 @@
 
 <aside id="separator-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-neutral-primary-soft border-e border-default" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-[#f5f5f5] border-e border-default">
+        <a href="/" class="flex items-center ps-2.5 mb-5">
+            <img src="assets/navlogo.png" class="h-6 me-3" alt="Logo" />
+            <?php foreach ($ids as $type => $id): ?>
+                <span class="self-center text-lg text-heading font-semibold whitespace-nowrap">
+                    <?= ucfirst($type) ?> ID: <?= htmlspecialchars($id) ?>
+                </span>
+            <?php endforeach; ?> 
+        </a>
         <ul class="space-y-2 font-medium">
 
             <!-- Dashboard -->
@@ -291,49 +299,49 @@
     require_once base_path('views/partials/footer.php');
     ?>
 </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const drawerBtn = document.querySelector('[data-drawer-toggle="separator-sidebar"]');
-            const sidebar = document.getElementById('separator-sidebar');
-            const backdrop = document.getElementById('sidebar-backdrop');
-            const body = document.body;
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const drawerBtn = document.querySelector('[data-drawer-toggle="separator-sidebar"]');
+        const sidebar = document.getElementById('separator-sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+        const body = document.body;
 
-            const toggleSidebar = () => {
-                // Toggle sidebar visibility
-                sidebar.classList.toggle('-translate-x-full');
+        const toggleSidebar = () => {
+            // Toggle sidebar visibility
+            sidebar.classList.toggle('-translate-x-full');
 
-                // Toggle Backdrop visibility
-                backdrop.classList.toggle('hidden');
+            // Toggle Backdrop visibility
+            backdrop.classList.toggle('hidden');
 
-                // Lock body scroll if menu is open (mobile/tablet only)
-                if (!backdrop.classList.contains('hidden')) {
-                    body.style.overflow = 'hidden';
-                } else {
-                    body.style.overflow = '';
-                }
-            };
-
-            // Click on Hamburger
-            if (drawerBtn) {
-                drawerBtn.addEventListener('click', toggleSidebar);
+            // Lock body scroll if menu is open (mobile/tablet only)
+            if (!backdrop.classList.contains('hidden')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
             }
+        };
 
-            // Click on Backdrop (Close menu)
-            if (backdrop) {
-                backdrop.addEventListener('click', () => {
-                    sidebar.classList.add('-translate-x-full');
-                    backdrop.classList.add('hidden');
-                    body.style.overflow = '';
-                });
-            }
+        // Click on Hamburger
+        if (drawerBtn) {
+            drawerBtn.addEventListener('click', toggleSidebar);
+        }
 
-            // Your existing dropdown logic...
-            document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetId = button.getAttribute('data-collapse-toggle');
-                    const target = document.getElementById(targetId);
-                    target.classList.toggle('hidden');
-                });
+        // Click on Backdrop (Close menu)
+        if (backdrop) {
+            backdrop.addEventListener('click', () => {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.add('hidden');
+                body.style.overflow = '';
+            });
+        }
+
+        // Your existing dropdown logic...
+        document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-collapse-toggle');
+                const target = document.getElementById(targetId);
+                target.classList.toggle('hidden');
             });
         });
-    </script>
+    });
+</script>
